@@ -3,28 +3,28 @@ export const chapter_04 = [
     category: "Nouns",
     words: [
       {
-        word: "attitude",
-        synonym: "disposition, approach, mood, opinion, outlook, perspective, position, stance",
-        antonym: "disregard, inattention, indifference",
-        definition: "The way a person thinks and behaves"
+        word: "ability",
+        synonym: "capability, capacity, competence, skill, talent, proficiency, aptitude",
+        antonym: "inability, incapability, incompetence, ineptitude",
+        definition: "The quality or state of being able to do something"
       },
       {
-        word: "benefit",
-        synonym: "advantage, aid, asset, assistance, favor, good, profit",
-        antonym: "loss, damage, injury, harm, disadvantage, detriment, impairment",
-        definition: "An advantage or help received"
+        word: "effect",
+        synonym: "result, outcome, consequence, aftermath, impact, influence",
+        antonym: "cause, source, origin, beginning",
+        definition: "A change that results from a particular influence"
       },
       {
-        word: "solution",
-        synonym: "answer, resolution, key, result, solving, explanation, unfolding, unravelling, clarification",
-        antonym: "problem, complication, confusion",
-        definition: "The act or process of solving a problem"
+        word: "rate",
+        synonym: "speed, pace, frequency, proportion, ratio, extent",
+        antonym: "None",
+        definition: "A measure, quantity, or frequency, typically one measured against some other quantity or measure"
       },
       {
-        word: "difficulty",
-        synonym: "problem, challenge, hardship, obstacle, trouble, issue",
-        antonym: "ease, simplicity, facility",
-        definition: "A situation that is hard to deal with or understand"
+        word: "score",
+        synonym: "tally, total, count, result, mark, grade, rating",
+        antonym: "None",
+        definition: "The number of points, goals, marks, etc., achieved in a game, test, or competition"
       }
     ]
   },
@@ -32,46 +32,28 @@ export const chapter_04 = [
     category: "Verbs",
     words: [
       {
-        word: "discover",
-        synonym: "find out, detect, learn, notice, perceive, realize, recognize",
-        antonym: "ignore, overlook, miss, neglect",
-        definition: "To find something new or previously unknown"
+        word: "expect",
+        synonym: "anticipate, look forward to, hope for, predict, foresee, presume, count on",
+        antonym: "disregard, ignore, overlook, neglect",
+        definition: "Look forward to or regard as probable"
       },
       {
-        word: "improve",
-        synonym: "enhance, better, upgrade, amend, mend, augment, ameliorate",
-        antonym: "worsen, deteriorate, decline",
-        definition: "To make or become better in quality"
+        word: "protect",
+        synonym: "defend, guard, safeguard, shield, secure, conserve",
+        antonym: "attack, harm, endanger, expose, jeopardize",
+        definition: "To keep safe from harm or injury; to shield or defend"
       },
       {
-        word: "produce",
-        synonym: "create, make, manufacture, generate, yield, provide, supply, construct",
-        antonym: "consume, destroy, waste, dismantle, demolish",
-        definition: "To make or manufacture something"
+        word: "increase",
+        synonym: "expand, enlarge, grow, rise, augment, boost, elevate",
+        antonym: "decrease, reduce, diminish, lessen, shrink, fall",
+        definition: "To become or make greater in size, amount, or degree"
       },
       {
-        word: "compete",
-        synonym: "contend, fight, rival, vie, challenge, struggle, contest, strive",
-        antonym: "cooperate, collaborate, assist",
-        definition: "To strive to achieve something or be successful at the expense of others"
-      },
-      {
-        word: "control",
-        synonym: "command, direct, regulate, restrain, operate, manage, govern",
-        antonym: "lose, let go, ignore, release",
-        definition: "To exercise restraint or direction over; dominate"
-      },
-      {
-        word: "rest",
-        synonym: "relax, sleep, recuperate, unwind, take a break, repose, lounge, take it easy",
-        antonym: "work, exercise, play, be active, strain",
-        definition: "To cease from activity or labor to relax or sleep"
-      },
-      {
-        word: "provide",
-        synonym: "give, supply, furnish, offer, deliver, contribute, present",
-        antonym: "withhold, take away, deprive, remove",
-        definition: "To make available for use; supply"
+        word: "prevent",
+        synonym: "stop, block, hinder, obstruct, impede, thwart, forestall",
+        antonym: "allow, encourage, facilitate, promote",
+        definition: "To keep something from happening or arising"
       }
     ]
   },
@@ -79,16 +61,40 @@ export const chapter_04 = [
     category: "Adjectives",
     words: [
       {
-        word: "positive",
-        synonym: "optimistic, confident, hopeful, upbeat, beneficial, effective, useful, constructive",
-        antonym: "negative, pessimistic, detrimental, harmful, discouraging, unhelpful, destructive",
-        definition: "Expressing or indicating approval or agreement; constructive"
+        word: "natural",
+        synonym: "spontaneous, innate, inherent, native, organic, unprocessed",
+        antonym: "artificial, synthetic, unnatural, forced, contrived",
+        definition: "Existing in or caused by nature; not made or caused by humankind"
       },
       {
-        word: "average",
-        synonym: "mean, standard, median, regular, typical, normal, ordinary",
-        antonym: "exceptional, extraordinary, unusual, rare, abnormal",
-        definition: "Typical or common; not particularly good, bad, or impressive"
+        word: "social",
+        synonym: "communal, collective, common, shared, cooperative",
+        antonym: "individual, private, personal, solitary, reclusive",
+        definition: "Relating to society or its organization; of or relating to human society and its modes of association"
+      },
+      {
+        word: "nervous",
+        synonym: "anxious, uneasy, tense, jittery, apprehensive, on edge",
+        antonym: "calm, relaxed, composed, confident, at ease",
+        definition: "Easily agitated or alarmed; characterized by nervous energy"
+      },
+      {
+        word: "embarrassed",
+        synonym: "ashamed, self-conscious, awkward, mortified, discomfited, flustered",
+        antonym: "unembarrassed, comfortable, confident, at ease",
+        definition: "Feeling or showing embarrassment"
+      },
+      {
+        word: "serious",
+        synonym: "grave, solemn, earnest, sober, severe, critical, weighty",
+        antonym: "trivial, unimportant, frivolous, playful, lighthearted",
+        definition: "Demanding or involving careful thought or attention; not trivial"
+      },
+      {
+        word: "whole",
+        synonym: "entire, complete, total, full, all, intact",
+        antonym: "partial, incomplete, fragmentary, broken",
+        definition: "All of; entire, including all its parts"
       }
     ]
   },
@@ -96,10 +102,10 @@ export const chapter_04 = [
     category: "Phrases",
     words: [
       {
-        word: "[be] likely to",
-        synonym: "probably, presumably, inclined, disposed, prone, apt",
-        antonym: "unlikely, improbable, doubtful, disinclined, unlikely to",
-        definition: "Having a high probability of; probable"
+        word: "pretend",
+        synonym: "act, feign, simulate, fake, put on, assume, make-believe",
+        antonym: "be honest, be sincere, be genuine, be real",
+        definition: "To give a false appearance of being, possessing, or performing"
       }
     ]
   }
