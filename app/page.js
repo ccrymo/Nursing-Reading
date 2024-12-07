@@ -1,36 +1,35 @@
 import Link from "next/link";
 
-export default function Home() {
-  const chapters = [
-    { id: 1, title: "Chapter 1", path: "./books/reading/chapters/ch1" },
-    { id: 2, title: "Chapter 2", path: "./books/reading/chapters/ch2" },
-    { id: 3, title: "Chapter 3", path: "./books/reading/chapters/ch3" },
-    { id: 6, title: "Chapter 4", path: "./books/reading/chapters/ch4" },
-    { id: 7, title: "Chapter 6", path: "./books/reading/chapters/ch6" },
-  
+const Modal = () => {
 
-  ];
 
   return (
-    <div className="flex flex-col h-screen items-center justify-center">
-      <h1 className="flex flex-col mb-10 items-center justify-center top-0 text-4xl md:text-4xl lg:text-6xl font-bold text-neutral-400">
-        Basic Reading 1
-     
-      </h1>
-      <ul className="space-y-3 ">
-        {chapters.map((chapter) => (
-          <li key={chapter.id}>
-            <Link
-              href={chapter.path}
-              className="text-2xl md:text-3xl lg:text-4xl font-bold hover:text-sky-200"
-            >
-              <button className="flex flex-col max-w-screen-sm mb-2 bg-gradient-to-r from-neutral-700 to-neutral-900 hover:from-amber-400 hover:to-amber-600 hover:text-amber-950 text-white font-bold py-4 px-20 items-center">
-                {chapter.title}
+    <div className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
+      <div className="bg-neutral-900 p-20 rounded-lg relative">
+   
+        <h2 className="text-3xl font-bold text-white mb-6">Choose the slide</h2>
+        <div className="flex flex-col space-y-4 ">
+          <Link href="./components/Vocabulary">
+            <button className="w-full  text-2xl font-bold py-3 px-6 rounded-lg bg-gradient-to-r from-neutral-800 to-neutral-900 hover:from-lime-400 hover:to-lime-600 hover:text-lime-950 text-white">
+              Vocabulary
+            </button>
+          </Link>
+          <Link href="./components/Reading_Exam">
+            <button className="w-full text-2xl font-bold py-3 px-6 rounded-lg bg-gradient-to-r from-neutral-800 to-neutral-900 hover:from-lime-400 hover:to-lime-600 hover:text-lime-950 text-white">
+              Exam
+            </button>
+          </Link>
+       
+            <Link href="./components/Reading_Skills">
+              <button className="w-full text-2xl font-bold py-3 px-6 rounded-lg bg-gradient-to-r from-neutral-800 to-neutral-900 hover:from-lime-400 hover:to-lime-600 hover:text-lime-950 text-white">
+                Skills overview
               </button>
             </Link>
-          </li>
-        ))}
-      </ul>
+          
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default Modal;
