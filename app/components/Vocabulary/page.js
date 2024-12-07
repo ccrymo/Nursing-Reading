@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Home() {
   const chapters = [
-    { id: 1, title: "Chapter 1", path: "./books/reading/chapters/ch1" },
-    { id: 2, title: "Chapter 2", path: "./books/reading/chapters/ch2" },
-    { id: 3, title: "Chapter 3", path: "./books/reading/chapters/ch3" },
-    { id: 6, title: "Chapter 4", path: "./books/reading/chapters/ch4" },
-    { id: 7, title: "Chapter 6", path: "./books/reading/chapters/ch6" },
+    { id: 1, title: "Chapter 1", path: "../../books/reading/chapters/ch1" },
+    { id: 2, title: "Chapter 2", path: "../../books/reading/chapters/ch2" },
+    { id: 3, title: "Chapter 3", path: "../../books/reading/chapters/ch3" },
+    { id: 6, title: "Chapter 4", path: "../../books/reading/chapters/ch4" },
+    { id: 7, title: "Chapter 6", path: "../../books/reading/chapters/ch6" },
   
 
   ];

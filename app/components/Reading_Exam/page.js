@@ -17,7 +17,7 @@ const TitleSlide = React.memo(({ title }) => (
     <motion.h2
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-4xl md:text-6xl lg:text-6xl font-bold text-cyan-400 text-center px-6"
+      className="text-4xl md:text-6xl lg:text-6xl font-bold text-amber-400 text-center px-6"
     >
       {capitalizeFirstLetter(title.split(/(?=[A-Z])/).join(" "))}
     </motion.h2>
@@ -55,7 +55,7 @@ const ContentSlide = React.memo(({ title, content }) => {
                     {typeof item === "object" ? (
                       <div className="mb-3">
                         {item.topic && (
-                          <h4 className="text-cyan-400 font-extrabold mb-2">
+                          <h4 className="text-amber-400 font-extrabold mb-2">
                             {capitalizeFirstLetter(item.topic)}
                           </h4>
                         )}
@@ -90,13 +90,13 @@ const ContentSlide = React.memo(({ title, content }) => {
               className="bg-neutral-900/30  pb-6 lg:px-6  rounded-xl -xl backdrop-blur-sm "
               key={key}
             >
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+              <h3 className="text-2xl font-bold text-amber-400 mb-4">
                 {capitalizeFirstLetter(key.split(/(?=[A-Z])/).join(" "))}
               </h3>
               {Object.entries(value).map(([subKey, subValue]) => (
                 <div key={subKey} className="mb-4">
                   {subValue.title && (
-                    <h4 className="text-xl font-semibold text-cyan-400 mb-2">
+                    <h4 className="text-xl font-semibold text-amber-400 mb-2">
                       {capitalizeFirstLetter(subValue.title)}
                     </h4>
                   )}
@@ -157,7 +157,7 @@ const ContentSlide = React.memo(({ title, content }) => {
             className="bg-neutral-900/30  pb-6 px-6 rounded-xl -xl backdrop-blur-sm "
             key={key}
           >
-            <h3 className="text-2xl font-bold text-cyan-400 mb-4">
+            <h3 className="text-2xl font-bold text-amber-400 mb-4">
               {capitalizeFirstLetter(key.split(/(?=[A-Z])/).join(" "))}
             </h3>
             <p className="text-white ml-4">{capitalizeFirstLetter(value)}</p>
@@ -172,7 +172,7 @@ const ContentSlide = React.memo(({ title, content }) => {
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="lg:mb-14 text-4xl lg:text-6xl font-extrabold text-cyan-400  mb-8 text-left"
+        className="lg:mb-14 text-4xl lg:text-6xl font-extrabold text-amber-400  mb-8 text-left"
       >
         {capitalizeFirstLetter(title.split(/(?=[A-Z])/).join(" "))}
       </motion.h2>
@@ -319,7 +319,7 @@ const SlidesPage = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="flex-1 py-3 px-6 rounded-lg font-bold text-white hover:text-cyan-950 bg-neutral-800 hover:bg-cyan-500 transition-colors"
+            className="flex-1 py-3 px-6 rounded-lg font-bold text-white hover:text-amber-950 bg-neutral-800 hover:bg-amber-500 transition-colors"
             onClick={handlePrev}
           >
             Previous
@@ -327,10 +327,10 @@ const SlidesPage = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className={`flex-1 py-3 px-6 rounded-lg font-bold text-white hover:text-cyan-950 ${
+            className={`flex-1 py-3 px-6 rounded-lg font-bold text-white hover:text-amber-950 ${
               isLastSlide
                 ? "bg-neutral-600 cursor-not-allowed"
-                : "bg-neutral-800 hover:bg-cyan-500"
+                : "bg-neutral-800 hover:bg-amber-500"
             } transition-colors`}
             onClick={handleNext}
             disabled={isLastSlide}
