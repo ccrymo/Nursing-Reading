@@ -126,15 +126,15 @@ const ExamSkills_Reading = {
   Collocations: {
     Definition: ["Words that often go together"],
     Examples: {
-      Correct: ["make food", "do homework"],
-      Incorrect: ["do food", "make homework"],
+      Correct: ["make food ✅", "do homework ✅"],
+      Incorrect: ["do food ❌", "make homework ❌"],
     },
     Usage: [
-      "Do food and make homework are possible grammatically, but speakers do not use these words together",
-      "Make food and do homework are the collocations that we use",
+      "❌ Do food and make homework are possible grammatically, but speakers do not use these words together",
+      "✅ Make food and do homework are the collocations that we use",
     ],
     Benefits: [
-      "Learning collocations will help you speak and write more naturally",
+      "Learning collocations will help you speak and write more naturally 🤓",
     ],
   },
 };
