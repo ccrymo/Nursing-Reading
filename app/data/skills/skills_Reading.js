@@ -14,11 +14,11 @@ const ExamSkills_Reading = {
     ],
   },
   "Reading Visual Information": {
-    UnderstandingVisualElements: {
-      Charts: ["Pie charts: Show parts of a whole"],
-      Graphs: ["Bar graphs: Compare quantities"],
-      Tables: ["Organize data in rows and columns"],
-    },
+    "UnderstandingVisualElements 📊": [
+      "Pie charts: Show parts of a whole",
+      "Bar graphs: Compare quantities",
+      "Tables: Organize data in rows and columns",
+    ],
     ReadingStrategies: [
       "Read the title and headings first",
       "Look for specific numbers you need",
@@ -27,7 +27,7 @@ const ExamSkills_Reading = {
   },
 
   "Identifying Topic Sentences": {
-    MainCharacteristics: [
+    "MainCharacteristics 📍": [
       "Topic sentence explains the main idea of a paragraph",
       "Usually appears at the start or end of a paragraph",
       "Other sentences support the topic sentence",
@@ -45,7 +45,7 @@ const ExamSkills_Reading = {
     ],
   },
   "Justifying Opinions": {
-    BasicPrinciple: [
+    "BasicPrinciple 💁‍♂️": [
       "Support your opinion with reasons",
       "Not enough to just state your opinion",
       "Always ask yourself 'Why?'",
@@ -59,7 +59,7 @@ const ExamSkills_Reading = {
     },
   },
   "Identifying Supporting Information": {
-    KeyQuestions: [
+    "KeyQuestions 🤔": [
       "Where is the supporting information in the reading?",
       "What about my own experience?",
       "Do I have examples that can support the claim?",
@@ -73,7 +73,7 @@ const ExamSkills_Reading = {
     },
   },
   "Modifying Nouns": {
-    BasicRule: ["A noun can modify another noun and acts like an adjective"],
+    "BasicRule 📃": ["A noun can modify another noun and acts like an adjective"],
     Examples: {
       Correct: [
         "vacation time = time on vacation",
@@ -88,7 +88,7 @@ const ExamSkills_Reading = {
     ],
   },
   "Parts of Speech": {
-    Purpose: [
+   "Purpose 🤷‍♂️": [
       "When you see a word you don't know in a text, it helps to identify the part of speech of the word",
     ],
     Noun: {
