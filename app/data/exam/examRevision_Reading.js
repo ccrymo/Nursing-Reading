@@ -2,7 +2,7 @@ const ExamRevision_Reading = {
   "What chapters to study?": {
     Chapters: [
       "Chapter 3: Sociology",
-      "Chapter 3: Physiology",
+      "Chapter 4: Physiology",
       "Chapter 6: Communication",
     ],
   },
@@ -40,11 +40,8 @@ const ExamRevision_Reading = {
     questionTypes: [
       "Match meaning to context.",
       "Reading short paragraph identifying pros/cons.",
-
       "Problem/solution.",
-
       "Summarization.",
-
       "Choose only 5 questions.",
     ],
   },
