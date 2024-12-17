@@ -37,9 +37,9 @@ const Header = ({
   }, [isQuizCompleted, isTimeUp, timeLimit, onTimeUp]);
 
   const getColor = () => {
-    if (progress > 50) return "bg-cyan-500";
-    if (progress > 25) return "bg-yellow-500";
-    return "bg-red-500";
+    if (progress > 50) return "bg-amber-400";
+    if (progress > 25) return "bg-yellow-400";
+    return "bg-red-400";
   };
 
   return (

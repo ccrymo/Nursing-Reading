@@ -4,10 +4,10 @@ const SubmitButton = ({ onClick, disabled }) => {
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`w-full mt-4 text-2xl font-bold py-3 px-6 ${
+      className={`w-full mt-4 text-2xl text-white font-bold py-3 px-6 ${
         disabled
           ? "bg-gray-400 cursor-not-allowed"
-          : "bg-blue-600 hover:bg-sky-600"
+          : "bg-amber-500 hover:bg-amber-600"
       }`}>
       Submit
     </button>

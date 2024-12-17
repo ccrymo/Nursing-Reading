@@ -6,8 +6,8 @@ const Button = ({ children, onClick, colour, isSelected }) => {
   const colourCheck = (colour, selected) => {
     if (colour === "red") {
       return selected
-        ? "bg-gradient-to-r from-sky-400 to-sky-600 text-white"
-        : "bg-gradient-to-r from-neutral-800 to-neutral-900 hover:from-red-700 hover:to-red-950 hover:text-white text-white";
+        ? "bg-gradient-to-r from-yellow-400 to-yellow-600 text-neutral-800"
+        : "bg-gradient-to-r from-neutral-800 to-neutral-900 hover:from-amber-700 hover:to-amber-950 hover:text-white text-white";
     } else if (colour === "gray") {
       return selected
         ? "bg-gradient-to-r from-blue-700 to-blue-950 text-white"
