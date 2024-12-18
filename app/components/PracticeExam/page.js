@@ -1,5 +1,4 @@
-"use client";
-
+'use client';
 import React, { useState, useEffect } from "react";
 import Question from "./UI/Question";
 import ReadingText from "./UI/ReadingText";
@@ -19,16 +18,40 @@ export default function Home() {
   const [showAnswerOverlay, setShowAnswerOverlay] = useState(false);
   const [isTimeUp, setIsTimeUp] = useState(false);
 
-  const paragraphs = quizData.readingText.split("\n\n");
-
   useEffect(() => {
-    console.log("quizData in useEffect:", quizData);
+    console.log("quizData:", quizData);
     if (quizData.questions) {
-      console.log("Total questions:", quizData.questions.length);
       setTotalQuestions(quizData.questions.length);
+      console.log("Questions with numbers:", quizData.questions.map(q => q.number));
     }
   }, []);
+  
 
+  const getReadingTextContent = () => {
+    const currentQuestion = getCurrentOverallQuestionNumber();
+    if (currentQuestion >= 1 && currentQuestion <= 12) {
+      return {
+        title: quizData.readingTextTitle01,
+        content: quizData.readingText01.split("\n\n")
+      };
+    } else if (currentQuestion >= 13 && currentQuestion <= 15) {
+      return {
+        title: quizData.readingTextTitle02,
+        content: quizData.readingText02.split("\n\n")
+      };
+    } else if (currentQuestion >= 27 && currentQuestion <= 31) {
+      return {
+        title: quizData.readingTextTitle03,
+        content: quizData.readingText03.split("\n\n")
+      };
+    } else if ((currentQuestion >= 16 && currentQuestion <= 26) || (currentQuestion >= 32 && currentQuestion <= 34)) {
+      return {
+        title: quizData.readingTextTitle04 || "No Reading Text",
+        content: quizData.readingText04 ? quizData.readingText04.split("\n\n") : ["This part of the quiz requires no reading text."]
+      };
+    };
+  };
+  
   const handleTimeUp = () => {
     setIsTimeUp(true);
   };
@@ -57,15 +80,23 @@ export default function Home() {
 
   const handleSubmit = () => {
     const currentQuestion = quizData.questions[currentQuestionIndex];
+    
+    // Add check for undefined currentQuestion
+    if (!currentQuestion) {
+      console.error('Question not found at index:', currentQuestionIndex);
+      return;
+    }
+  
     const selectedAnswer = answers[`question_${currentQuestion.number}`];
     const isCorrect = selectedAnswer === currentQuestion.correctAnswer;
-
+  
     if (isCorrect) {
       setCorrectAnswers((prev) => prev + 1);
     }
-
+  
     setShowAnswerOverlay(true);
   };
+  
 
   const getCurrentOverallQuestionNumber = () => {
     return currentQuestionIndex + 1;
@@ -73,11 +104,19 @@ export default function Home() {
 
   const renderQuestions = () => {
     if (currentQuestionIndex >= totalQuestions) return null;
-
-    const q = quizData.questions[currentQuestionIndex];
+  
+    // Filter out any undefined or malformed questions
+    const validQuestions = quizData.questions.filter(q => q && q.number);
+    const q = validQuestions[currentQuestionIndex];
+    
+    if (!q) {
+      console.error('Question not found at index:', currentQuestionIndex);
+      return null;
+    }
+  
     const selectedAnswer = answers[`question_${q.number}`];
     const isCorrect = selectedAnswer === q.correctAnswer;
-
+  
     return (
       <Question
         key={q.number}
@@ -91,6 +130,9 @@ export default function Home() {
       />
     );
   };
+  
+  
+  
 
   const handleCloseModal = () => {
     setIsQuizCompleted(false);
@@ -117,7 +159,10 @@ export default function Home() {
 
       <div className="flex flex-1 pt-16">
         <div className="hidden md:block md:w-1/2 h-full">
-          <ReadingText content={paragraphs} title={quizData.readingTextTitle} />
+          <ReadingText
+            content={getReadingTextContent().content}
+            title={getReadingTextContent().title}
+          />
         </div>
         <div className="hidden md:block md:w-1/2 h-full p-4 flex flex-col">
           <div className="overflow-y-auto flex-grow">{renderQuestions()}</div>
@@ -130,12 +175,8 @@ export default function Home() {
           {!isQuestionView ? (
             <div className="h-[calc(100vh-120px)]">
               <ReadingText
-                content={
-                  quizData?.readingText
-                    ? quizData.readingText.split("\n\n")
-                    : []
-                }
-                title={quizData?.readingTextTitle || ""}
+                content={getReadingTextContent().content}
+                title={getReadingTextContent().title}
               />
             </div>
           ) : (
